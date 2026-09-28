@@ -1160,7 +1160,7 @@ Bu bölmədəki təsvir təcrübədə populyar olaraq istifadə olunan ikinci d�
 
 #pagebreak()
 
-mühəndislik səyidir və modelin effektivliyi əsasən analitikin düzgün xüsusiyyətlər dəstini çıxarmaq bacarığından asılıdır. Digər faydalı kitabxanalara fastFM [11] və faktorizasiya maşınları üçün bəzi sürətli öyrənmə metodlarına malik libMF [144] daxildir.
+mühəndislik səyidir və modelin effektivliyi əsasən analitikin düzgün xüsusiyyətlər dəstini çıxarmaq bacarığından asılıdır. Digər faydalı kitabxanalara fastFM [11] və faktorizasiya maşınları üçün bəzi sürətli öyrənmə metodlarına malik libMF#super[3] [144] daxildir.
 
 === 8.10 Xülasə (Summary)
 
@@ -1179,6 +1179,11 @@ Mənfi olmayan matris faktorizasiyası [79]-da təqdim edilmişdir və onun ehti
   $ D approx U V^T $
 ]
 
+#v(1fr)
+#line(length: 35%, stroke: 0.4pt)
+#v(-0.2em)
+#text(size: 7.5pt)[#super[3] libFM və libMF kitabxanaları fərqlidir.]
+
 #pagebreak()
 
 #block(spacing: 0.45em)[
@@ -1191,9 +1196,16 @@ Mənfi olmayan matris faktorizasiyası [79]-da təqdim edilmişdir və onun ehti
 
 #block(spacing: 0.45em)[
   *3.* Tutaq ki, çatışmayan elementləri olan $n times n$ ölçülü simmetrik oxşarlıq matrisi $D$-yə sahibsiniz. Siz çatışmayan elementləri $D approx U U^T$ simmetrik faktorizasiyasından istifadə edərək bərpa etmək qərarına gəlirsiniz. Burada $U$ $n times k$ ölçülü matrisdir və $k$ faktorizasiyanın ranqıdır.
-  - (a) Frobenius norması və $L_2$ nizamlamasından istifadə edərək optimallaşdırma modeli üçün məqsəd funksiyasını yazın.
-  - (b) Matris mərkəzli yeniləmələr terminlərində qradiyent enişi addımlarını çıxarın.
-  - (c) Faktorizasiya üçün $k$-nın nə qədər böyük qiymətindən istifadə olunmasından asılı olmayaraq, dəqiq faktorizasiyanın mövcud olmayacağı şərtləri müzakirə edin.
+
+  #pad(left: 1.5em)[
+    #grid(
+      columns: (auto, 1fr),
+      gutter: 0.8em,
+      [(a)], [Frobenius norması və $L_2$ nizamlamasından istifadə edərək optimallaşdırma modeli üçün məqsəd funksiyasını yazın.],
+      [(b)], [Matris mərkəzli yeniləmələr terminlərində qradiyent enişi addımlarını çıxarın.],
+      [(c)], [Faktorizasiya üçün $k$-nın nə qədər böyük qiymətindən istifadə olunmasından asılı olmayaraq, dəqiq faktorizasiyanın mövcud olmayacağı şərtləri müzakirə edin.]
+    )
+  ]
 ]
 
 #block(spacing: 0.45em)[
@@ -1252,8 +1264,15 @@ Mənfi olmayan matris faktorizasiyası [79]-da təqdim edilmişdir və onun ehti
 
 #block(spacing: 0.45em)[
   *16.* Tutaq ki, ədədi/çatışmayan qiymətləri olan istifadəçi-obyekt reytinq matrisiniz var. Bundan əlavə, istifadəçilər bir-birlərinin etibarlılığını ikili/çatışmayan qiymətlərlə qiymətləndiriblər.
-  - (a) Bir istifadəçinin artıq qiymətləndirmədiyi bir obyekt üzrə reytinqini təxmin etmək üçün paylaşılan matris faktorizasiyasından necə istifadə edə biləcəyinizi göstərin.
-  - (b) (a) bəndindəki ilə oxşar məqsədlərə nail olmaq üçün faktorizasiya maşınlarından necə istifadə edə biləcəyinizi göstərin.
+
+  #pad(left: 1.5em)[
+    #grid(
+      columns: (auto, 1fr),
+      gutter: 0.8em,
+      [(a)], [Bir istifadəçinin artıq qiymətləndirmədiyi bir obyekt üzrə reytinqini təxmin etmək üçün paylaşılan matris faktorizasiyasından necə istifadə edə biləcəyinizi göstərin.],
+      [(b)], [(a) bəndindəki ilə oxşar məqsədlərə nail olmaq üçün faktorizasiya maşınlarından necə istifadə edə biləcəyinizi göstərin.]
+    )
+  ]
 ]
 
 #pagebreak()

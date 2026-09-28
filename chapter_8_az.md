@@ -993,7 +993,7 @@ Bu bölmədəki təsvir təcrübədə populyar olaraq istifadə olunan ikinci d�
 
 ---
 
-mühəndislik səyidir və modelin effektivliyi əsasən analitikin düzgün xüsusiyyətlər dəstini çıxarmaq bacarığından asılıdır. Digər faydalı kitabxanalara fastFM [11] və faktorizasiya maşınları üçün bəzi sürətli öyrənmə metodlarına malik libMF [144] daxildir.
+mühəndislik səyidir və modelin effektivliyi əsasən analitikin düzgün xüsusiyyətlər dəstini çıxarmaq bacarığından asılıdır. Digər faydalı kitabxanalara fastFM [11] və faktorizasiya maşınları üçün bəzi sürətli öyrənmə metodlarına malik libMF[^3] [144] daxildir.
 
 ## 8.10 Xülasə (Summary)
 
@@ -1010,6 +1010,8 @@ Mənfi olmayan matris faktorizasiyası [79]-da təqdim edilmişdir və onun ehti
   *1. Meylli matris faktorizasiyası:* $n \times d$ ölçülü natamam $D$ matrisinin $n \times k$ ölçülü $U$ matrisinə və $d \times k$ ölçülü $V$ matrisinə faktorizasiyasını nəzərdən keçirək:
 $$D \approx U V^T$$
 
+[^3]: libFM və libMF kitabxanaları fərqlidir.
+
 ---
 
   Tutaq ki, siz $U$-nun sondan əvvəlki sütununun və $V$-nin son sütununun bütün elementlərinin 1-ə bərabər olması məhdudiyyətini əlavə edirsiniz. Bu modelin təsnifat modellərinə meylliliyin (bias) əlavə edilməsi ilə oxşarlığını müzakirə edin. Qradiyent enişi necə dəyişdirilir?
@@ -1017,9 +1019,14 @@ $$D \approx U V^T$$
   *2.* 1-ci Çalışmanın ssenarisində, müşahidə olunan reytinqlər üzrə Frobenius norması $U$ və $V$-nin son sütunlarına məhdudiyyətlərlə daha yaxşı optimallaşdırılacaq, yoxsa məhdudiyyətsiz? Çatışmayan elementlərin qiymətləndirilməsi zamanı belə bir məhdudiyyətin əlavə edilməsi nə üçün arzuolunan ola bilər?
 
   *3.* Tutaq ki, çatışmayan elementləri olan $n \times n$ ölçülü simmetrik oxşarlıq matrisi $D$-yə sahibsiniz. Siz çatışmayan elementləri $D \approx U U^T$ simmetrik faktorizasiyasından istifadə edərək bərpa etmək qərarına gəlirsiniz. Burada $U$ $n \times k$ ölçülü matrisdir və $k$ faktorizasiyanın ranqıdır.
-  - (a) Frobenius norması və $L_2$ nizamlamasından istifadə edərək optimallaşdırma modeli üçün məqsəd funksiyasını yazın.
-  - (b) Matris mərkəzli yeniləmələr terminlərində qradiyent enişi addımlarını çıxarın.
-  - (c) Faktorizasiya üçün $k$-nın nə qədər böyük qiymətindən istifadə olunmasından asılı olmayaraq, dəqiq faktorizasiyanın mövcud olmayacağı şərtləri müzakirə edin.
+
+  
+
+&nbsp;&nbsp;&nbsp;&nbsp;(a) Frobenius norması və $L_2$ nizamlamasından istifadə edərək optimallaşdırma modeli üçün məqsəd funksiyasını yazın.
+
+&nbsp;&nbsp;&nbsp;&nbsp;(b) Matris mərkəzli yeniləmələr terminlərində qradiyent enişi addımlarını çıxarın.
+
+&nbsp;&nbsp;&nbsp;&nbsp;(c) Faktorizasiya üçün $k$-nın nə qədər böyük qiymətindən istifadə olunmasından asılı olmayaraq, dəqiq faktorizasiyanın mövcud olmayacağı şərtləri müzakirə edin.
 
   *4.* Məqsəd funksiyasının $J = \| D - U V^T \|_1$ olduğu $L_1$-itkili matris faktorizasiyası üçün qradiyent enişi yeniləmələrini çıxarın.
 
@@ -1054,8 +1061,12 @@ $$U_o^T = V^+ D_o^T$$
   *15. Seçimdənkənar faktor öyrənməsi:* Çalışma 14 ilə eyni ssenarini nəzərdən keçirin, burada siz seçimdaxili verilənlər matrisi $D \approx U V^T$ və seçimdənkənar verilənlər matrisi $D_o$ üçün seçimdənkənar faktor matrisi $U_o$-nu öyrənməyə çalışırsınız. $V$ faktor matrisi seçimdaxili öyrənmədən təyin edilir. Çalışma 14-dəki kimi qapalı şəkildə olan həllər əksər matris faktorizasiyası parametrlərində nadirdir. Bu fəsildə müzakirə edilən qradiyent enişi yeniləmələrinin $U_o$-nun birbaşa öyrənilməsi üçün necə dəyişdirilə biləcəyini müzakirə edin. Xüsusilə: (i) məhdudiyyətsiz matris faktorizasiyası, (ii) mənfi olmayan matris faktorizasiyası və (iii) loqistik matris faktorizasiyası hallarını müzakirə edin.
 
   *16.* Tutaq ki, ədədi/çatışmayan qiymətləri olan istifadəçi-obyekt reytinq matrisiniz var. Bundan əlavə, istifadəçilər bir-birlərinin etibarlılığını ikili/çatışmayan qiymətlərlə qiymətləndiriblər.
-  - (a) Bir istifadəçinin artıq qiymətləndirmədiyi bir obyekt üzrə reytinqini təxmin etmək üçün paylaşılan matris faktorizasiyasından necə istifadə edə biləcəyinizi göstərin.
-  - (b) (a) bəndindəki ilə oxşar məqsədlərə nail olmaq üçün faktorizasiya maşınlarından necə istifadə edə biləcəyinizi göstərin.
+
+  
+
+&nbsp;&nbsp;&nbsp;&nbsp;(a) Bir istifadəçinin artıq qiymətləndirmədiyi bir obyekt üzrə reytinqini təxmin etmək üçün paylaşılan matris faktorizasiyasından necə istifadə edə biləcəyinizi göstərin.
+
+&nbsp;&nbsp;&nbsp;&nbsp;(b) (a) bəndindəki ilə oxşar məqsədlərə nail olmaq üçün faktorizasiya maşınlarından necə istifadə edə biləcəyinizi göstərin.
 
 ---
 
